@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop.qlnvController">
+   <children>
+      <AnchorPane prefHeight="437.0" prefWidth="95.0">
+         <children>
+            <VBox layoutX="2.0" layoutY="71.0" prefHeight="241.0" prefWidth="97.0" spacing="14.0">
+               <children>
+                  <Label text="Name">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <Label text="ID">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <Label text="Tel">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <Label text="Position">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <Label text="Base Salary">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <Label text="Bonus">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Total Salary">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Pay Date">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="554.0" prefWidth="239.0">
+         <children>
+            <VBox layoutX="14.0" layoutY="60.0" prefHeight="241.0" prefWidth="200.0" spacing="14.0">
+               <children>
+                  <TextField fx:id="nameTextField" />
+                  <TextField fx:id="idTextField" />
+                  <TextField fx:id="telTextField" />
+                  <TextField fx:id="basesalTextField" />
+                  <TextField fx:id="bonusTextField" />
+                  <TextField fx:id="totalSalTextField" />
+                  <DatePicker fx:id="timeDP" onAction="#getDate" prefHeight="25.0" prefWidth="203.0" />
+               </children>
+            </VBox>
+            <Button fx:id="addButton" layoutX="14.0" layoutY="349.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="60.0" text="Add" />
+            <Button fx:id="delButton" layoutX="84.0" layoutY="349.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="60.0" text="Delete " />
+            <Button fx:id="editButton" layoutX="154.0" layoutY="349.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Edit" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="554.0" prefWidth="519.0">
+         <children>
+            <TableView layoutX="38.0" layoutY="110.0" prefHeight="200.0" prefWidth="481.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="posCol" prefWidth="75.0" text="Position" />
+                  <TableColumn fx:id="telCol" prefWidth="75.0" text="Telephone " />
+                  <TableColumn fx:id="totalsalCol" prefWidth="84.0" text="Total Salary" />
+                  <TableColumn fx:id="timeCol" prefWidth="96.0" text="Pay Date" />
+              </columns>
+            </TableView>
+            <TextField fx:id="searchTextField" layoutX="38.0" layoutY="71.0" promptText="Search">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+         </children></AnchorPane>
+   </children>
+</HBox>
